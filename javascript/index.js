@@ -2,19 +2,12 @@
 import { Cliente } from "./Cliente.js";
 import { ContaCorrente } from "./ContaCorrente.js";//precisa passar a extensão do arquivo
 
-const conta1 = new ContaCorrente();
-conta1.agencia = "000";
-const cliente1 = new Cliente();
-cliente1.nome = "Teste 1";
-cliente1.cpf = "000000000-00";
-conta1.cliente = cliente1;
+const cliente1 = new Cliente("Teste 1", "000000000-00");
+const conta1 = new ContaCorrente(cliente1, "000");
 
-const conta2 = new ContaCorrente();
-conta2.agencia = "111"; 
-const cliente2 = new Cliente();
-cliente2.nome = "Teste 2";
-cliente2.cpf = "111111111-11";
-conta2.cliente = cliente2;
+
+const cliente2 = new Cliente("Teste 2", "111111111-11");
+const conta2 = new ContaCorrente(cliente2, "111");
 
 
 conta1.depositar(100);
