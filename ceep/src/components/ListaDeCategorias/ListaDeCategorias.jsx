@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './estilo.css';
 
 class ListaDeCategorias extends Component {
     state = {};
@@ -9,7 +10,6 @@ class ListaDeCategorias extends Component {
             this.props.adicionarCategoria(valorCategoria);
         }
     }
-
 
     render() {
         return (
